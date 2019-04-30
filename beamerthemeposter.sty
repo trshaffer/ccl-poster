@@ -1,0 +1,36 @@
+% Copyright 2019 Tim Shaffer <tshaffe1@nd.edu>
+
+\DeclareOptionBeamer{height}{\PassOptionsToPackage{height=#1}{beamerouterthemesidebar}}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\useoutertheme[height=200pt,width=0pt]{sidebar}
+\useinnertheme{rounded}
+\usecolortheme{whale}
+\usecolortheme{orchid}
+
+\setbeamercolor*{frametitle}{parent=palette primary}
+\setbeamerfont{block title}{size={}}
+
+\setbeamertemplate{navigation symbols}{}
+%\setbeamerfont{frametitle}{size={\fontsize{64pt}{64pt}}}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{128pt}(\textwidth-110pt,-160pt)
+\includegraphics[height=128pt]{nd.png}
+\end{textblock*}
+\begin{textblock*}{128pt}(\textwidth-400pt,-160pt)
+\includegraphics[height=128pt]{cctools.png}
+\end{textblock*}
+\noindent\makebox[\linewidth]{{\usebeamercolor[bg]{structure}\rule{\paperwidth}{24pt}}}}
+
+\setbeamerfont{block title}{size=\fontsize{32pt}{32pt},series=\bfseries}
+\setbeamerfont{block body}{size=\fontsize{32pt}{32pt}}
+\setbeamerfont{block title example}{size=\fontsize{32pt}{32pt},series=\bfseries}
+\setbeamerfont{block body example}{size=\fontsize{32pt}{32pt}}
+\setbeamerfont{block title alerted}{size=\fontsize{32pt}{32pt},series=\bfseries}
+\setbeamerfont{block body alerted}{size=\fontsize{32pt}{32pt}}
+
+\mode
+<all>
